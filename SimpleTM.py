@@ -15,18 +15,18 @@ program = open('tmprogram.txt').read()
 
 max=500 # max tape len and max loops
 
-transaction = {}
+transition = {}
 state = "0"
 headpos = 0 
 tape = input + "_" * max
 
 print("Input: " + input)
 
-# Read in the program file into transaction data-set
+# Read in the program file into transition data-set
 for line in program.splitlines():
    if not line.startswith('#') and len(line) >= 9:
       qc, inp, qn, out, dir = line.split()
-      transaction[qc,inp] = (qn, out, dir)
+      transition[qc,inp] = (qn, out, dir)
 
 i = 0
 while state != "A" and i < max:
@@ -34,11 +34,11 @@ while state != "A" and i < max:
    # Head reads from the tape
    inp = tape[headpos]
 
-   # Get the transaction function from the data-set for this state and this input symbol
-   curretntTransaction = transaction.get((state, inp))
+   # Get the transition function from the data-set for this state and this input symbol
+   curretntTransition = transition.get((state, inp))
 
-   if curretntTransaction:
-      qn, out, dir = curretntTransaction
+   if curretntTransition:
+      qn, out, dir = curretntTransition
 
       # Write back on the the tape
       tape = tape[:headpos] + out + tape[headpos+1:]
