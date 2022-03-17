@@ -16,8 +16,10 @@ The varables in the Python program: f(qc, inp) = (qn, out, dir)<br>
 The syntax in the tmprogra.txt: qc inp qn out dir
 
 Ex for tmprogram.txt:<br>
-qc=0 inp=1 qn=2 out=_ dir=R<br>
-0 1  2 _ R<br>
+If we want qc=0 inp=1 qn=2 out=_ dir=R<br>
+
+> 0 1  2 _ R<br>
+
 We stand in state '0'.<br> 
 If we read '1' then we replace it with '_' and goes to state '2'. <br>
 And then move the head to the Right  <br>
