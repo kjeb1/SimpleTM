@@ -60,4 +60,4 @@ while state != "A" and i < max:
       print("input: " + curretntTransaction)
    i += 1
 
-print("q" + state, tape.replace('_', ''),  dir)
+print("\nq_Accept:", tape.replace('_', ''))
