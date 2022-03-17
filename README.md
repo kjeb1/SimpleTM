@@ -24,8 +24,3 @@ If we want qc=0 inp=1 qn=2 out=_ dir=R<br>
 We stand in state '0'.<br> 
 If we read '1' then we replace it with '_' and goes to state '2'. <br>
 And then move the head to the Right  <br>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> e79c4aa426e524a244f77043df4130f7476600bc
