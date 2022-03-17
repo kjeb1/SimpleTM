@@ -13,7 +13,7 @@
 input = '01+01' # Binary addition, it should then accept "10"
 program = open('tmprogram.txt').read()
 
-max=50 # max tape len and max loops
+max=500 # max tape len and max loops
 
 transaction = {}
 state = "0"
@@ -57,5 +57,7 @@ while state != "A" and i < max:
       print("q" + state, tape.replace('_', ''),  dir)
 
    i += 1
-
-print("\nq_Accept:", tape.replace('_', ''))
+if state == "A":
+  print("\nq_Accept: output:", tape.replace('_', ''), "for input", input)
+else:
+  print("\nq_Reject for input", input)
