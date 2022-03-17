@@ -1,15 +1,17 @@
 # SimpleTM
 Simple universal Turing Machine
 
-This Python program is a simple implentation of an universal <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing Machine</a><br>
-It reads its configuration/program from tmprogram.txt
+This Python program is a simple implentation of an universal <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing Machine</a> (TM).
+A Turing Machine is a model for general purpose computation.
 
-Transfer function f(current-q-state, input-symbol) = (next-q-state, output-symbol, direction)<br>
+The transfer function for a TM is f(current-q-state, input-symbol) = (next-q-state, output-symbol, direction)<br>
 
 1. We stand in state 'qc'
 2. If the head reads 'inp' from the tape: then go to state 'qn'
 3. Write 'out' and overwrite that 'inp' on the tape
 4. Move the head to in 'dir' direction (R(ight) og L(eft)) 
+
+This Python program emulate such TM and read in its "program" or congfiguration from a file and compute an input string. 
 
 The varables in the Python program: f(qc, inp) = (qn, out, dir)<br>
 The syntax in the tmprogra.txt: qc inp qn out dir
