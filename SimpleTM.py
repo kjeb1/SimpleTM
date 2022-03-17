@@ -10,7 +10,7 @@
 # 3. Write 'out' and overwrite that 'inp' on the tape
 # 4. Move the head to in 'dir' direction (R(ight) og L(eft)) 
 
-input = '01+01'
+input = '01+01' # Binary addition, it should then accept "10"
 program = open('tmprogram.txt').read()
 
 max=50 # max tape len and max loops
@@ -54,10 +54,8 @@ while state != "A" and i < max:
          state = qn
          print()
       
-
       print("q" + state, tape.replace('_', ''),  dir)
-   else:
-      print("input: " + curretntTransaction)
+
    i += 1
 
 print("\nq_Accept:", tape.replace('_', ''))
