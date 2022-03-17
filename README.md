@@ -5,6 +5,7 @@ This Python program is a simple implentation of an universal <a href="https://en
 It reads its configuration/program from tmprogram.txt
 
 Transfer function f(current-q-state, input-symbol) = (next-q-state, output-symbol, direction)<br>
+Shorten f(qc, inp) = (qn, out, dir)<br>
 
 1. We stand in state 'qc'
 2. If the head reads 'inp' from the tape: then go to state 'qn'
