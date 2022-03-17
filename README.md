@@ -4,7 +4,7 @@ Simple universal Turing Machine
 This Python program is a simple implentation of an universal <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing Machine</a><br>
 It reads its configuration/program from tmprogram.txt
 
-Transfer function f(current-q-state, input-symbol) = (next-q-state, output-symbol, direction)<br>
+Transfer function f(current-q-state, input-symbol) = (next-q-state, output-symbol, direction-head)<br>
 Shorten f(qc, inp) = (qn, out, dir)<br>
 
 1. We stand in state 'qc'
