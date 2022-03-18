@@ -9,6 +9,7 @@ It can have these outcomes:
 - It accept the input string (enters qA)
 - It reject the input string (in this progam, it just stops)
 - It loops - same as rejects (it will stop after 500 iterations)
+
 A Turing Machine operates based on instructions (or program, or configuration). Each instruction is described with a transfer function.
 
 Transfer function, f(current-q-state, input-symbol) = (next-q-state, output-symbol, direction-head)<br>
