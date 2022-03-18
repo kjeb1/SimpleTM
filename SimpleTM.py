@@ -1,17 +1,14 @@
 
 # Simple Turing Machine
 
-# Transfer function f(current-q-state, input-symbol) = (next-q-state, output-symbol, direction)
-# f(qc, inp) = (qn, out, dir)
-# qc inp qn out dir
-#
-# 1. We stand in state 'qc'
-# 2. If the head reads 'inp' from the tape: then go to state 'qn'
-# 3. Write 'out' and overwrite that 'inp' on the tape
-# 4. Move the head to in 'dir' direction (R(ight) og L(eft)) 
+import sys
 
-input = '01+01' # Binary addition, it should then accept "10"
-program = open('tmprogram.txt').read()
+if len(sys.argv) < 3:
+   print("Usage: " + sys.argv[0] + " [program file]  [input]\n  Ex: " + sys.argv[0] + " addition.txt 01+01\n" )
+   exit(0)
+
+program = open(sys.argv[1]).read()
+input = sys.argv[2]
 
 max=500 # max tape len and max loops
 
