@@ -1,16 +1,7 @@
 #
 # Binary addition
 #
-# Will accept all strings with equal number of 0s and 1s
-# 10, 1100, 111000, ...
-# 01, 0101, 010101, ...
-# 11010100, 1110101000,111101010000, ...
 #
-# Formal:
-# {w ∈ {0,1}∗|w contains an equal number of 0s and 1s}
-# Q = {q0, q1, q2, q3, q4, qA}
-# Σ = {0,1}
-# Γ = {0,1,x,_}
 # 
 
 # q0
