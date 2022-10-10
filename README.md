@@ -1,7 +1,7 @@
 # SimpleTM
 Simple universal Turing Machine
  
-> Usage: SimpleTM.py [program file]  [input]
+> Usage: SimpleTM.py [program file]  [input]<br>
 >  Ex: SimpleTM.py addition.txt 01+01
 
 This Python program is a simple implentation of an universal <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing Machine</a> (TM). A Turing Machine is a model for general purpose computation.<br>
