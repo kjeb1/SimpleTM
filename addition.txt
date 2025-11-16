@@ -1,7 +1,7 @@
 #
-# Binary addition
-#
-#
+# Unary addition: "111+111" → "111111"
+# Removes the + separator between the two unary numbers.
+# "+" can be any character
 # 
 
 # q0
