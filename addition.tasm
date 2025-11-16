@@ -1,0 +1,41 @@
+#Tiny Asembly for SimpleTM
+
+# Unary addition: "111+111" → "111111"
+# Removes the + separator between the two unary numbers.
+# "+" can be any character
+
+state start:
+        on 0: write 0, move R, goto start
+        on 1: write 1, move R, goto start
+        on +: write +, move R, goto s1
+        on _: write _, move R, goto s1
+
+state s1:
+        on 0: write 0, move R, goto s1
+        on 1: write 1, move R, goto s1
+        on +: write +, move L, goto s2
+        on _: write _, move L, goto s2
+
+state  s2:
+        on 0: write 1, move L, goto s2
+        on 1: write 0, move L, goto s3
+        on +: write +, move R, goto s5
+        on _: write _, move R, goto s5
+
+state  s3:
+        on 0: write 0, move L, goto s3
+        on 1: write 1, move L, goto s3
+        on +: write +, move L, goto s4
+        on _: write _, move L, goto s4
+
+state  s4:
+        on 0: write 1, move R, goto start
+        on 1: write 0, move L, goto s4
+        on +: write 1, move R, goto start
+        on _: write 1, move R, goto start
+
+state  s5:
+        on 1: write _, move R, goto s5
+        on +: write _, move R, goto s5
+        on _: write _, move R, goto ACCEPT
+
