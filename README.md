@@ -116,8 +116,8 @@ Every computation is just a sequence of local steps that gradually modify the ta
 It's not easy to read the formal TM transactions (the programming language).  I made compiler from a simple Tiny Assembly language to the Turing Machine transition table format:
 
 Tiny Assembly language:
-
-    on qc: write inp, move qn, goto out dir
+    state qc:
+    on inp: write out, move dir, goto qn
 
 compiles in to TM language
     qc inp qn out dir
