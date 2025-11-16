@@ -98,17 +98,17 @@ def run_tm(transitions, tm_input):
     - Tape is initialized as: input_string + BLANK * MAX_STEPS
     - Head starts at position 0.
     - Machine halts on:
-        • reaching ACCEPT_STATE,
-        • missing transition,
-        • out-of-bounds left movement,
-        • exceeding MAX_STEPS.
+        * reaching ACCEPT_STATE,
+        * missing transition,
+        * out-of-bounds left movement,
+        * exceeding MAX_STEPS.
 
     During execution:
         - Tape updates are applied directly.
         - State changes are printed.
         - BLANK symbols are hidden in printed tape output.
     """
-    state = "0"
+    state = next(iter(transitions.keys()))[0]
     headpos = 0
 
     # Use a list for the tape so individual cells can be edited efficiently
