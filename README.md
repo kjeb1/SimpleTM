@@ -111,3 +111,28 @@ Each loop of the emulator does the following:
 
 By following these simple operations: read, write, move, change state; the emulator reproduces exactly the behavior of a classical single-tape Turing Machine.
 Every computation is just a sequence of local steps that gradually modify the tape and move the head across it.
+
+## Tiny Assembly to TM
+It's not easy to read the formal TM transactions (the programming language).  I made compiler from a simple Tiny Assembly language to the Turing Machine transition table format:
+
+Tiny Assembly language:
+
+    on qc: write inp, move qn, goto out dir
+
+compiles in to TM language
+    qc inp qn out dir
+
+
+Example input (TinyASM):
+
+    # Flip bits until blank, then accept
+    state 0:
+        on 0: write 1, move R, goto 0
+        on 1: write 0, move R, goto 0
+        on _: write _, move R, goto ACCEPT
+
+Example output (TM):
+
+    0 0 0 1 R
+    0 1 0 0 R
+    0 _ A _ R
